@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<body>
+<head>
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+		h3, p{
+			font-family: monospace;
+			background-color: #ff66ff;
+		}
+		body {
+			background-image: url(https://as2.ftcdn.net/v2/jpg/02/24/13/91/1000_F_224139156_WGob2WPdNhRg0Ihv8u3vrXLlJouU9SBW.jpg);
+		}
+	</style>
+	<title>Exercise 4</title>
+		<form>
+		<h3>Yards to Inches Converter</h3>
+		<br>
+		<p>How Many Yard Do You Want To Convert To Inches?</p>
+		<br>
+		<input type="text" id="num1">
+		<br>
+		<br>
+		<input type="submit" onclick="Compute()" value="Enter" class="btn btn-info">
+	</form>
+
+	<script type="text/javascript">
+		function Compute(){
+			let num1 = document.getElementById("num1").value;
+			let product = Number(num1 * 36) ;
+
+			window.alert("in centimeters, it's " + product);
+
+		}
+	</script>
+</head>
+</body>
+</html>
