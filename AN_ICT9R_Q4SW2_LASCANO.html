@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comme:wght@200&family=Unbounded&display=swap" rel="stylesheet">
+<style type="text/css">
+	body{ background-color: #FEF2AD; }
+	h1{ font-family: 'Unbounded', cursive; 
+	    color: #ED8E29;}
+	h3{ color: #F3B640; }
+	form{ font-family: 'Comme', sans-serif; }
+</style>
+	
+	
+	<title>Q4 Seatwork 2</title>
+</head>
+<body>
+	<div class="container text-center">
+	<h1>Temperature Conversion ⋆˙⟡ ♡</h1>
+	<p id="DT"></p>
+
+	<script type="text/javascript">
+		const D = new Date();
+		document.getElementById('DT').innerHTML = D
+
+	</script>
+
+		<form>
+		<h3 >Fahrenheit to Celsius</h3>
+		<br>
+		<input type="text" id="F">
+		<br>
+		<br>
+		<input type="submit" onclick="Compute()" value="CONVERT" class="btn btn-warning">
+	</form>
+
+	<script type="text/javascript">
+		function Compute(){
+			let F = document.getElementById("F").value;
+			let answer = Number((F - 32)) * 5/9;
+
+			window.alert("In Celsius, that's " + answer);
+
+		}
+	</script>
+
+	<br>
+
+	<form>
+		<h3>Celsius to Fahrenheit</h3>
+		<br>
+		<input type="text" id="C">
+		<br>
+		<br>
+		<input type="submit" onclick="Compute()" value="CONVERT" class="btn btn-warning">
+	</form>
+
+<script type="text/javascript">
+		function Compute(){
+			let C = document.getElementById("F").value;
+			let answer = Number((C * 9/5)) + 32;
+
+			window.alert("In Fahrenheit, that's " + answer);
+
+		}
+</script>
+
+	<br>
+
+	<table class="table table-striped table-hover table-act table-secondary">
+		<tr>
+			<th>Celsius</th>
+			<th>Fahreheit</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>-273.15</td>
+			<td>-459.67</td>
+			<td>Absolute zero temperature</td>
+		</tr>
+		<tr>
+			<td>0</td>
+			<td>32</td>
+			<td>Freezing/Melting point of water</td>
+		</tr>
+		<tr>
+			<td>21</td>
+			<td>69.8</td>
+			<td>Room temperature</td>
+		</tr>
+		<tr>
+			<td>37</td>
+			<td>98.6</td>
+			<td>Average body temperature</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>212</td>
+			<td>Boiling point of water</td>
+		</tr>
+	</table>
+	</div>
+
+</body>
+</html>
