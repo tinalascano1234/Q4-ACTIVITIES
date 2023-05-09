@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chicle&family=Fredoka:wght@300&display=swap" rel="stylesheet">
+    <style type="text/css">
+    	img{ width: 300px; }
+    	h2{ font-family: 'Chicle', cursive; color: #1A01F1 ;}
+    	p{ font-family: 'Fredoka', sans-serif; }
+    	body { background-image: url(https://cdn.wallpapersafari.com/21/59/DF4R6G.jpg);}
+    </style>
+	<title>Q4 Exercise 5</title>
+</head>
+<body>
+<div class="container">
+	<h2>The Ohm's Law Equation</h2>
+	<p>Ohm’s Law Statement: Ohm’s law states that the voltage across a conductor is directly proportional to the current flowing through it, provided all physical conditions and temperature, remain constant. </p>
+    <img src="https://www.allaboutcircuits.com/uploads/articles/current-flow-ohms-law.jpg" id='figure1'>
+    <p>Ohm’s Law Equation: V = IR, where V is the voltage across the conductor, I is the current flowing through the conductor and R is the resistance provided by the conductor to the flow of current.</p><br>
+    <img src="https://www.allaboutcircuits.com/uploads/articles/current-flow-resistance-equation.png"><br>
+    <p>Calculate the amount of voltage supplied by a battery, given values of current (I) and resistance (R):</p>
+
+    <div class="row">
+    	<div class="col-6 mt-5">
+    		Enter Voltage(E): <input type="text" id="V" class="form-control">
+    		Enter Resistance(R): <input type="text" id="R" class="form-control">
+    		<input type="Submit" value="COMPUTE" class="btn btn-secondary" onclick="Calculate()">
+    		<p id="OUTPUT"></p>   				
+    </div>
+
+    <div class="col-6 mt-4">
+          <img src="https://www.allaboutcircuits.com/uploads/articles/current-flow-voltage-battery.jpg" id='figure2'>
+    </div>
+    </div>
+<audio id="audio1" src="electric-hum.mp3"></audio>
+    <h2>What makes a light bulb light up?</h2>
+<p>The typical incandescent light bulb contains a thin wire (usually tungsten) called a filament that has a high electrical resistance. This filament gets very hot when an electric current passes through it. The intense temperature makes the filament glow brightly.</p>
+<button class="btn btn-success" onmouseover="On()" onmouseout="Off()">TURN ON LIGHT</button>
+<img src="switchOFF.PNG" id="bulb">
+
+         <script type="text/javascript">
+         	function Calculate(){
+         	let V = document.getElementById('V').value;
+         	let R = document.getElementById('R').value;
+         	let Current = V/R;
+         	document.getElementById('OUTPUT').innerHTML = "The cumputed Current(I) is :" + Current;
+         	}
+         		function On(){
+         		document.getElementById('bulb').src = "switchON.PNG"
+         		document.getElementById('audio1').play();
+         	}
+         	function Off(){
+         		document.getElementById('bulb').src = "switchOFF.PNG"
+         		document.getElementById('audio1').pause();
+         	}
+         </script> 
+     
+ </div>
+</div>
+
+<br>SOURCES: <br>	
+<a href="https://byjus.com/physics/ohms-law/">Ohm's Law Explanation</a>
+<br>
+<a href="https://www.uu.edu/dept/physics/scienceguys/2002Aug.cfm#:~:text=The%20typical%20incandescent%20light%20bulb,makes%20the%20filament%20glow%20brightly.">Why do Light Bulbs Light Up?</a>
+</div>
+</body>
+</html>
